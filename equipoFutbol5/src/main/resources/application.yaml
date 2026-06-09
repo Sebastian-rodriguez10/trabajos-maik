@@ -1,3 +1,19 @@
 spring:
   application:
     name: equipoFutbol5
+  datasource:
+    url: jdbc:mysql://localhost:3306/market
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate: #Orm java
+      ddl-auto: none
+    show-sql: true #Muestra en los logs que consulta se esta ejecutando
+    properties:
+      hibernate: 
+        "[format_sql]": true #Formatea el lenguaje SQL
+
+server:
+  port: 8080
