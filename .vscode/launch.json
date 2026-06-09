@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EquipoFutbol5Application<equipoFutbol5>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com._1.equipoFutbol5.EquipoFutbol5Application",
+            "projectName": "equipoFutbol5",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
