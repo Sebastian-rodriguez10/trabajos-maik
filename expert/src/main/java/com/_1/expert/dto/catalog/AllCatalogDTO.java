@@ -5,5 +5,8 @@ import lombok.Data;
 @Data
 public class AllCatalogDTO {
     private String nameCatalog;
-    private Float quantityProducts;
+    private String categoryName;
+    private String productName;
+    private Float price;
+    private Integer productStock;
 }

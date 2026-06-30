@@ -22,6 +22,7 @@ public class Products {
     @Column(name = "stock")
     private Integer stock;
 
-    @Column(name = "id_category")
-    private Integer idCategory;
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    private Category category;
 }

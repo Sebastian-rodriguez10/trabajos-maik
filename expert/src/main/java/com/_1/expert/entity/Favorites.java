@@ -12,9 +12,11 @@ public class Favorites {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "id_customers")
-    private Integer idCustomer;
+    @ManyToOne
+    @JoinColumn(name = "id_customers")
+    private Customers customer;
     
-    @Column(name = "id_product")
-    private Integer idProduct;
+    @ManyToOne
+    @JoinColumn(name = "id_product")
+    private Products product;
 }

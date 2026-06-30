@@ -9,6 +9,16 @@
             "projectName": "equipoFutbol5",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ExpertApplication<expert>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com._1.expert.ExpertApplication",
+            "projectName": "expert",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
