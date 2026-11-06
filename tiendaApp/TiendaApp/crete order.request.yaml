@@ -1,0 +1,23 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/orders
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \   \"idProduct\": 2,\r
+
+    \r
+
+    \    \"quantity\": 10\r
+
+    }\r
+
+    \r
+
+    \    "
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjQsInJvbElkIjoyLCJzdWIiOiJsYXVyYSIsImlhdCI6MTc5MzkwODMyMywiZXhwIjoxNzkzOTA4OTIzfQ.2Dw63DDM3tiBTa3q94JPIcmxZ00uQbz_tBwt7-fO8qI
+order: 16000

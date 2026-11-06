@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/orders/2/cancel
+method: PATCH
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjQsInJvbElkIjoyLCJzdWIiOiJsYXVyYSIsImlhdCI6MTc5MzkyMjAxOSwiZXhwIjoxNzkzOTIyNjE5fQ.GK_4UdZNPFu819EPAFoK_rMrC_r8zOU7U6r9UPkV9uA
+order: 21000

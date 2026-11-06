@@ -1,0 +1,31 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/users/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \   \"userName\": \"Pepita\",\r
+
+    \r
+
+    \    \"email\": \"pepita@gmail.com\",\r
+
+    \r
+
+    \    \"password\": \"12345678\",\r
+
+    \r
+
+    \    \"rol\": 3,\r
+
+    \r
+
+    \    \"active\": true\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0kie}}"
+order: 5000

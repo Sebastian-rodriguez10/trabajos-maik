@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/orders/sales
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsInJvbElkIjozLCJzdWIiOiJQZXBpdGEiLCJpYXQiOjE3OTM5MTg2OTUsImV4cCI6MTc5MzkxOTI5NX0.pXNsgk0M6hruw2mjBbgykkZwLpyqjvCunByiVIBQBfo
+order: 18000

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Service;
 
 import com._1.gestorDeTareas.dto.AllTaksResponseDTO;
@@ -144,18 +143,20 @@ public class TaksService {
         return response;
     }
 
-    public HttpGlobalResponse<List<AllTaksResponseDTO>> getTaksState(PathStateRequestDTO requestState) {
+    public HttpGlobalResponse<List<AllTaksResponseDTO>> getTaksState(String state) {
 
         HttpGlobalResponse<List<AllTaksResponseDTO>> response = new HttpGlobalResponse<>();
-        List<Taks> listFound = repository.findByState(requestState.getEstado());
+        List<Taks> listFound = repository.findByState(state.toUpperCase());
         List<AllTaksResponseDTO> list = new ArrayList<>();
 
         if (listFound.isEmpty()) {
-            response.setMessage("No hay tareas con el estado: " + requestState.getEstado());
+            response.setMessage("No hay tareas con el estado: " + state);
             response.setSuccess(false);
+            return response;
         }
 
         for (Taks taks: listFound) {
+
             AllTaksResponseDTO dto = new AllTaksResponseDTO();
             dto.setTitulo(taks.getTitle());
             dto.setDescripcion(taks.getDescription());
@@ -168,9 +169,14 @@ public class TaksService {
         }
         
         response.setData(list);
-        response.setMessage("Lista por categoria: " + requestState.getEstado());
+        response.setMessage("Lista por categoria: " + state);
         response.setSuccess(true);
 
         return response;
+    }
+
+    public HttpGlobalResponse<List<AllTaksResponseDTO>> getTaksPriority(String state) {
+        HttpGlobalResponse<List<AllTaksResponseDTO>> response = new HttpGlobalResponse<>();
+        
     }
 }

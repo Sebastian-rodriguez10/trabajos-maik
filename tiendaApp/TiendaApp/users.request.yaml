@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/users/
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_12co}}"
+order: 4000

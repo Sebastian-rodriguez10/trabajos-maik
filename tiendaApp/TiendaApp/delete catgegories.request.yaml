@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/categories/2
+method: DELETE
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0ztr}}"
+order: 10000

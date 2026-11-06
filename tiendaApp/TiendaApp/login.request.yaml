@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/auth/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"user\": \"clarita\",\r
+
+    \r
+
+    \    \"password\": \"12345678\"\r
+
+    \r
+
+    }"
+order: 2000

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: tiendaApp
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/tienda_db
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+server:
+  port: 9090
+  servlet:
+    context-path: /api/v1/tienda #esta es la ruta del proyecto
+
+security:
+  jwt:
+    secret-key: ${env.jwt.secret-key}
+    token-expiration: ${env.jwt.token-expiration}
+

@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/users/2/status
+method: PATCH
+body:
+  type: json
+  content: "{\r\n    \"status\": false\r\n}"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_12gm}}"
+order: 7000

@@ -1,0 +1,31 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/products/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \   \"name\": \"Computador plus\",\r
+
+    \r
+
+    \    \"description\": \"El mejor que te vas a encontrar\",\r
+
+    \r
+
+    \    \"price\": 12000,\r
+
+    \r
+
+    \    \"stock\": 30,\r
+
+    \r
+
+    \    \"idCategory\": 1\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_06lg}}"
+order: 12000

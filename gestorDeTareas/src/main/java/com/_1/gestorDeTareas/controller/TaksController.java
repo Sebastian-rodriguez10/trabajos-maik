@@ -60,6 +60,7 @@ public class TaksController {
             return ResponseEntity.status(200).body(response);
 
         } catch (Exception e) {
+
             e.printStackTrace();
             HttpGlobalResponse<AllTaksResponseDTO> error = new HttpGlobalResponse<>();
             error.setMessage("Recurso no encontrado");
@@ -118,15 +119,28 @@ public class TaksController {
     }
 
     @GetMapping("/listar-estado")
-    public ResponseEntity<HttpGlobalResponse<List<AllTaksResponseDTO>>> getTaksState(@RequestParam PathStateRequestDTO requestState) {
+    public ResponseEntity<HttpGlobalResponse<List<AllTaksResponseDTO>>> getTaksState(@RequestParam("estado") String state) {
         try {
 
-            HttpGlobalResponse<List<AllTaksResponseDTO>> response = service.getTaksState(requestState);
+            HttpGlobalResponse<List<AllTaksResponseDTO>> response = service.getTaksState(state);
             return ResponseEntity.status(200).body(response);
 
         } catch (Exception e) {
             return ResponseEntity.status(404).body(null);
         }
     }
+
+    @GetMapping("/listar-prioridad")
+    public ResponseEntity<HttpGlobalResponse<List<AllTaksResponseDTO>>> getTaksPriority(@RequestParam("prioridad") String priority) {
+        try {
+
+            HttpGlobalResponse<List<AllTaksResponseDTO>> response = service.getTaksPriority(priority);
+            return ResponseEntity.status(200).body(response);
+
+        } catch (Exception e) {
+            return ResponseEntity.status(404).body(null);
+        }
+    }
+    
     
 }

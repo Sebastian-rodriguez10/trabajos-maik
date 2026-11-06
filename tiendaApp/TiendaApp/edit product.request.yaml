@@ -1,0 +1,31 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/products/3
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \   \"name\": \"Computador super duper\",\r
+
+    \r
+
+    \    \"description\": \"El mejor que te vas a encontrar super mejor\",\r
+
+    \r
+
+    \    \"price\": 12000000,\r
+
+    \r
+
+    \    \"stock\": 60,\r
+
+    \r
+
+    \    \"idCategory\": 1\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0uct}}"
+order: 14000

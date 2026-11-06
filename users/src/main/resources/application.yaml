@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: users
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/users_3231651
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+server:
+  port: 9090
+  servlet:
+    context-path: /api/v1/users #ruta principal de contexto para todo el proyecto
+
+security:
+  jwt:
+    secret-key: ${env.jwt.secret-key} # clave secreta generada con openssl rand -base64 32
+    token-expiration: ${env.jwt.token-expiration} # 10 min expresado en milisegundos
+
+

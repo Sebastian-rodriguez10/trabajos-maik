@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:9090/api/v1/tienda/categories/
+method: POST
+body:
+  type: json
+  content: "{\r\n    \"name\": \"Carne\"\r\n}"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0egj}}"
+order: 8000
